@@ -7,7 +7,7 @@ export const compare = (password: string, queryPassword: string) => {
 };
 
 export const hashPassword = (password: string) => {
-    if (!process.env.SALT) {
+    if (!env.SALT) {
         throw new Error("SALT is not defined in environment variables");
     }
     const salt = bcrypt.genSaltSync(parseInt(env.SALT, 10));
