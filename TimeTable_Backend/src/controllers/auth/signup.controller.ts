@@ -1,8 +1,8 @@
 import type { Context } from 'hono';
 import type { RowDataPacket } from 'mysql2';
-import type { signupPayload } from '../../types/user.type';
+import type { signupPayload } from '../../types/auth.type';
 
-import { connectDB } from './../../database/database';
+import { connectDB } from '../../database/database';
 
 import { hashPassword } from '../../lib/bcrypt';
 
