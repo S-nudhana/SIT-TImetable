@@ -4,11 +4,11 @@ import { getSignedCookie } from "hono/cookie";
 
 import env from "../schemas/env.schema";
 
-export const auth = async (c: Context, next: Next) => {
+export const authMiddleware = async (c: Context, next: Next) => {
   try {
     const token = await getSignedCookie(c, env.COOKIE_SECRET, 'token');
     if (!token) {
-      return c.json({ message: 'ไม่พบ Token' }, 401);
+      return c.json({ message: 'โปรดเข้าสู่ระบบ' }, 401);
     }
 
     const payload = await jwtVerify(token);
