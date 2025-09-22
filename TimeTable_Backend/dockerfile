@@ -1,0 +1,8 @@
+FROM oven/bun
+
+COPY . .
+
+RUN bun install
+
+EXPOSE 5000
+ENTRYPOINT [ "bun", "src/index.ts" ]
