@@ -13,8 +13,7 @@ export const connectDB = async (): Promise<mysql.Connection> => {
     database: env.DB_NAME,
     port: Number(env.DB_PORT),
   });
-
-  console.log('Database connected');
+  
   return connection;
 };
 
