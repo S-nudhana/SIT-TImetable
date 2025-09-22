@@ -2,10 +2,10 @@ import { setSignedCookie } from 'hono/cookie';
 
 import type { Context } from 'hono';
 import type { RowDataPacket } from 'mysql2';
-import type { signinPayload } from '../../types/user.type';
+import type { signinPayload } from '../../types/auth.type';
 import type { JwtPayload } from '../../types/jwt.type';
 
-import { connectDB } from './../../database/database';
+import { connectDB } from '../../database/database';
 
 import { compare } from '../../lib/bcrypt';
 import { jwtSign } from '../../lib/jwt';

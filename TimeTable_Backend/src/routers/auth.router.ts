@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 
-import signin from '../controllers/authentication/signin.controller';
-import signup from '../controllers/authentication/signup.controller';
+import signin from '../controllers/auth/signin.controller';
+import signup from '../controllers/auth/signup.controller';
 
 const auth = new Hono()
 
